@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript学習</title>
+</head>
+<body>
+    <p>関数</p>
+    <script>
+        'use strict';// プログラムのミスを確認できる
+
+/*パターン1　基本形
+        function 関数名(引数リスト) {
+            処理
+            return 戻り値;
+        }
+*/
+
+/*パターン2　無名関数、匿名関数
+        const 変数名 = function(引数リスト) {
+            処理
+            return 戻り値;
+        }
+*/
+
+/*パターン3　アロー式
+        const 変数名 = (引数リスト) => {
+            処理
+            return 戻り値;
+        }
+*/
+
+
+        // 基本形
+        function add(n, m) {
+            return n + m;
+        }
+        // 関数呼び出し
+        let sum = add(10, 20);
+        console.log(sum);  // 30
+
+
+        // 関数定義2　無名関数　あんまり使わない。
+        const sub = function(n, m) {
+            return n - m;
+        };  // 最後にセミコロンが必要
+
+        // 関数呼び出し
+        let dif = sub(30, 10);
+        console.log(dif);  // 20
+
+
+        // アロー式
+        const multi = (n, m) => {
+            return n * m;
+        }
+        // 関数呼び出し
+        let ans = multi(20, 3);
+        console.log(ans);  // 60
+
+        // アロー式 省略形
+        const div = num => num / 2;
+        // 関数呼び出し
+        let num2 = div(100);
+        console.log(num2);  // 50
+
+    </script>
+</body>
+</html>

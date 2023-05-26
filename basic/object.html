@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript学習</title>
+</head>
+<body>
+    <p>オブジェクト</p>
+    <script>
+
+        'use strict';// プログラムのミスを確認できる
+
+        /*
+        // オブジェクトの定義
+        let オブジェクト名 = {
+            プロパティ名: 値,  // プロパティ
+            プロパティ名: 値,  // プロパティ
+            ...
+        };
+
+        // プロパティへのアクセス // 2つ方法がある
+        オブジェクト名.プロパティ名;
+        オブジェクト名['プロパティ名'];
+        */
+
+        // オブジェクトの定義
+        const user = {
+            name: 'Alice',
+            age: 20,
+        };
+
+        // オブジェクトへのアクセス
+        console.log(user.name);
+        console.log(user['name']);
+
+        // 値の変更
+        user.age = 23;
+        // user['age'] = 23; // これでもいい
+
+        console.log(user.age); //変更確認
+
+        // 要素を追加
+        user.email = 'alice@xxx.co.jp';
+        // user['email'] = 'alice@xxx.co.jp'; // これでもいい
+        
+        console.log(user.email);
+
+    </script>
+</body>
+</html>

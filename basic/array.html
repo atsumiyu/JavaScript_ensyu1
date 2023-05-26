@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript学習</title>
+</head>
+<body>
+    <p>配列</p>
+    <script>
+        'use strict';// プログラムのミスを確認できる
+
+        /*
+        // 配列の宣言と初期化
+        let 配列名 = [値1, 値2, 値3];
+        // 0番目の要素の参照
+        配列名[0];
+        // 要素の上書き
+        配列名[0] = 100;
+        */
+
+        // 配列の宣言
+        let fruits = ['いちご', 'みかん', 'ぶどう'];
+        // 添え字は0から始まる
+        console.log(fruits[0]);  // いちご
+        console.log(fruits[1]);  // みかん
+        console.log(fruits[2]);  // ぶどう
+        console.log(fruits);     // 全て表示
+        // 定義されていない要素はundefinedとなる
+        // undefinedとnullは別物
+        console.log(fruits[3]);  // undefined
+        console.log(fruits[-1]); // undefined
+
+
+
+        // lengthで要素数を取得可能。forとの相性が良い。
+        for(let i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
+        }
+
+
+
+        // for...of 大体拡張for文
+        // (let 変数名 of 配列名) とすることで、変数に各要素が格納されながらループ処理できる
+        for(let fruit of fruits) {
+            console.log(fruit);
+        }
+
+
+
+        // 末尾に要素を追加
+        fruits.push('りんご');
+        // 文字列として表示
+        console.log(fruits.toString());  // いちご,みかん,ぶどう,りんご
+
+        // 末尾を取り出す＝削除 popで末尾を取る
+        let last = fruits.pop();
+        console.log(fruits.toString());  // いちご,みかん,ぶどう
+        console.log(last);  // りんご
+
+        // 先頭に要素追加
+        fruits.unshift('ばなな');
+        console.log(fruits.toString());  // ばなな,いちご,みかん,ぶどう
+
+        // 先頭を取り出す shiftで先頭を取る
+        let first= fruits.shift();
+        console.log(fruits.toString());  // いちご,みかん,ぶどう
+        console.log(first);  // ばなな
+
+
+
+    </script>
+</body>
+</html>

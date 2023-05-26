@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript学習</title>
+</head>
+<body>
+    <p>繰り返し文</p>
+    <script>
+
+        /*
+        for(初期化; 条件式; 後処理) {
+            繰り返したい処理
+        }
+        */
+
+        // Helloを5回出力
+        for(let i = 0; i < 5; i++) {
+            console.log('Hello');
+        }
+
+        // ifと同じく処理が1行の場合は{}を省略可能
+        for(let i = 0; i < 5; i++)
+            console.log('Hello');
+
+        // 1~10までの合計を計算
+        let total = 0;
+        for(let i = 1; i <= 10; i++) {
+            total += i;
+        }
+        console.log(total);
+        
+
+        /*
+        while(条件式) {
+            繰り返したい処理
+        }
+        */
+
+        //サンプル
+        let i = 0;
+        while(i < 5) {
+            console.log('Hello');
+            i++;  // 書き忘れると無限ループになるので注意
+        }
+
+        i = 0;
+        do {
+            console.log('Hello');
+            i++;
+        } while (i < 5)
+
+
+
+    </script>
+</body>
+</html>

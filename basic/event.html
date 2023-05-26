@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サンプル</title>
+</head>
+<body>
+<div id="div1">
+  <button id="btn1">ボタン1</button>
+</div>
+
+<br>
+<p>
+  <input type="text" id="num1">
+  +
+  <input type="text" id="num2">
+  =
+  <span id="answer"></span>
+</p>
+<button id="btn2">ボタン2</button>
+
+<script>
+  'use strict';
+
+  /*
+  イベント：
+  ボタンクリック、スクロール、など
+  ユーザー側による何かしらの操作、きっかけ。
+
+  イベントリスナー：
+  イベントが起きた時に動作するように
+  定義された関数のこと
+  */
+
+  /*
+  イベントリスナーの定義
+  要素のオブジェクト.addEventListener('イベントの種類', 関数);
+  */
+
+
+  // addEventListenerで何かイベントが起きたときの
+  // addEventListener('イベントの種類',関数)
+  document.getElementById('btn1').addEventListener('click', () => {
+    document.getElementById('div1').textContent = 'クリックされました'
+  });
+
+//   document.getElementById('btn').addEventListener('click', () => {
+//     const num1 = Number(document.getElementById('num1').value);
+
+//   });
+
+  document.getElementById('btn2').addEventListener('click', () => {
+    const num1 = Number(document.getElementById('num1').value);
+    const num2 = Number(document.getElementById('num2').value);
+    const sum = num1 + num2;
+    document.getElementById('answer').textContent = sum;
+  });
+
+  /*
+  // 要素の取得
+  const btn2 = document.getElementById('btn2');
+
+  // イベントリスナーの定義
+  btn2.addEventListener('click', e =>{
+
+    // テキストに入力された値の取得
+    let num1 = Number(document.getElementById('num1').value);
+    let num2 = Number(document.getElementById('num2').value);
+    let sum = num1 + num2;
+
+    // 合計値をanswerにセット
+    document.getElementById('answer').textContent = sum;
+
+  });
+  */
+
+
+</script>
+</body>
+</html>

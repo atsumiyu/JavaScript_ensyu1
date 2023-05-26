@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript学習</title>
+</head>
+<body>
+    <p>Hello</p>
+    <script>
+        'use strict';// プログラムのミスを確認できる
+        // アラートで「Hello JavaScript」が表示される
+        //window.alert('Hello JavaScript');
+        console.log("Hello.JavaScript");// コンソールに表示させる。
+
+        var greet1 = 'Good Morning'; // 使ってはいけない
+        let greet2 = 'Hello'; // 変数の宣言
+        const greet3 = 'Bye'; // 定数の宣言
+
+        console.log(greet1); // Good Morning
+        console.log(greet2); // Hello
+        console.log(greet3); // Bye
+
+        // varとletで宣言した変数は再代入可能
+        greet1 = 'おはよう';
+        greet2 = 'こんにちは';
+
+        // greet3 = 'さようなら';  // constは再代入不可
+
+        
+        console.log('文字列1'); // 文字列1
+        console.log("文字列2"); // 文字列2
+        
+
+        console.log(200); // 200
+        console.log(20.5); // 20.5
+
+        const name = 'Alice';
+
+        // `で囲うと中に変数を入れられる
+        console.log(`Hello ${name}`); 
+
+        // 加算
+        console.log(1 + 2); // 3
+        // 減算
+        console.log(10 - 5); // 5
+        // 乗算
+        console.log(3 * 3); // 9
+        // 除算
+        console.log(10 / 4); // 2.5
+        // 剰余(除算の余り)
+        console.log(10 % 3); // 1
+        // べき乗
+        console.log(2 ** 3); // 8 3乗
+
+        // 文字列結合ができる
+        console.log("Hello" + " World");
+
+
+        // if (条件式1) {
+        //     条件式1がtrueの時の処理
+        // } else if (条件式2) {
+        //     条件式2がtrueの時の処理
+        // } else {
+        //     どの条件式にも当てはまらない時の処理
+        // }
+
+        /* 比較演算子
+        === ： 等しい
+        !== ： 等しくない
+        ==：等しい（型を考慮しない）
+        !=：等しくない（型を考慮しない）
+        >= ： 左辺が右辺以上
+        > ： 左辺が右辺より小さい
+        <= ： 左辺が右辺以下
+        < ： 左辺が右辺より小さい
+        */
+
+        console.log(100 === 100);   // true
+        // 型が異なればfalseになる
+        console.log(100 === '100'); // false
+
+        console.log(100 == 100);   // true
+        // 型が異なってもtrue
+        console.log(100 == '100'); // true
+
+        console.log(100 !== '100') // true
+        console.log(100 != '100')  // false
+
+
+        /* 論理演算子
+        && ： AND。左辺と右辺が両方trueの場合にtrue
+        || ： OR。左辺か右辺の片方でもtrueの場合true
+        ! ： NOT。trueの場合はfalse、falseの場合はtrue
+        */
+        let htmlScore = 80;
+        let cssScore = 70;
+
+        // 両方が80以上の場合に処理を通る
+        if(htmlScore >= 80 && cssScore >= 80) {
+            console.log('両方80以上');
+        }
+
+        // 文字列の中に文字が入っているとtrue
+        // if(name) {
+        //     console.log(name);
+        // }
+
+        /*
+        switch(式) {
+            case ラベル:
+                処理
+                break;
+            ...
+            default :
+                処理
+                break;
+        }
+        */
+
+        // 文字で比較
+        const blood_type = 'A';
+        switch (blood_type) {
+            case 'A':
+                console.log('A型');
+                break;
+            case 'B':
+                console.log('B型');
+                break;
+            case 'O':
+                console.log('O型');
+                break;
+            case 'AB':
+                console.log('AB型');
+                break;
+            default:
+                console.log('人間以外');
+                break;
+        }
+
+        /*
+        条件式 ? trueの場合の値 : falseの場合の値;
+        */
+
+        let score = 90;
+        let msg = score >= 80 ? '合格' : '不合格';
+        console.log(msg); // 合格
+
+
+        /*
+        for(初期化; 条件式; 後処理) {
+            繰り返したい処理
+        }
+        */
+
+        
+        // Helloを5回出力
+        for(let i = 0; i < 5; i++) {
+            console.log('Hello');
+        }
+
+        // ifと同じく処理が1行の場合は{}を省略可能
+        for(let i = 0; i < 5; i++)
+            console.log('Hello');
+
+        // 1~10までの合計を計算
+        let total = 0;
+        for(let i = 1; i <= 10; i++) {
+            total += i;
+        }
+        
+
+        /*
+        while(条件式) {
+            繰り返したい処理
+        }
+        */
+
+        //サンプル
+        let i = 0;
+        while(i < 5) {
+            console.log('Hello');
+            i++;  // 書き忘れると無限ループになるので注意
+        }
+
+        i = 0;
+        do {
+            console.log('Hello');
+            i++;
+        } while (i < 5)
+
+        
+        /*
+        // 配列の宣言と初期化
+        let 配列名 = [値1, 値2, 値3];
+        // 0番目の要素の参照
+        配列名[0];
+        // 要素の上書き
+        配列名[0] = 100;
+        */
+
+        // 配列の宣言
+        let fruits = ['いちご', 'みかん', 'ぶどう'];
+        // 添え字は0から始まる
+        console.log(fruits[0]);  // いちご
+        console.log(fruits[1]);  // みかん
+        console.log(fruits[2]);  // ぶどう
+        console.log(fruits);     // 全て表示
+        // 定義されていない要素はundefinedとなる
+        // undefinedとnullは別物
+        console.log(fruits[3]);  // undefined
+        console.log(fruits[-1]); // undefined
+
+
+
+        // lengthで要素数を取得可能。forとの相性が良い。
+        for(let i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
+        }
+
+
+
+        // for...of 大体拡張for文
+        // (let 変数名 of 配列名) とすることで、変数に各要素が格納されながらループ処理できる
+        for(let fruit of fruits) {
+            console.log(fruit);
+        }
+
+
+
+        // 末尾に要素を追加
+        fruits.push('りんご');
+        // 文字列として表示
+        console.log(fruits.toString());  // いちご,みかん,ぶどう,りんご
+
+        // 末尾を取り出す＝削除 popで末尾を取る
+        let last = fruits.pop();
+        console.log(fruits.toString());  // いちご,みかん,ぶどう
+        console.log(last);  // りんご
+
+        // 先頭に要素追加
+        fruits.unshift('ばなな');
+        console.log(fruits.toString());  // ばなな,いちご,みかん,ぶどう
+
+        // 先頭を取り出す shiftで先頭を取る
+        let first= fruits.shift();
+        console.log(fruits.toString());  // いちご,みかん,ぶどう
+        console.log(first);  // ばなな
+
+
+        /*
+        // オブジェクトの定義
+        let オブジェクト名 = {
+            プロパティ名: 値,  // プロパティ
+            プロパティ名: 値,  // プロパティ
+            ...
+        };
+
+        // プロパティへのアクセス // 2つ方法がある
+        オブジェクト名.プロパティ名;
+        オブジェクト名['プロパティ名'];
+        */
+
+        // オブジェクトの定義
+        const user = {
+            name: 'Alice',
+            age: 20,
+        };
+
+        // オブジェクトへのアクセス
+        console.log(user.name);
+        console.log(user['name']);
+
+        // 値の変更
+        user.age = 23;
+
+        // user['age'] = 23; // これでもいい
+        console.log(user.age);
+
+        // 要素を追加
+        user.email = 'alice@xxx.co.jp';
+
+        // user['email'] = 'alice@xxx.co.jp'; // これでもいい
+        console.log(user.email);
+
+/*パターン1　基本形
+        function 関数名(引数リスト) {
+            処理
+            return 戻り値;
+        }
+*/
+
+/*パターン2　無名関数、匿名関数
+        const 変数名 = function(引数リスト) {
+            処理
+            return 戻り値;
+        }
+*/
+
+/*パターン3　アロー式
+        const 変数名 = (引数リスト) => {
+            処理
+            return 戻り値;
+        }
+*/
+
+
+        // 基本形
+        function add(n, m) {
+            return n + m;
+        }
+        // 関数呼び出し
+        let sum = add(10, 20);
+        console.log(sum);  // 30
+
+
+        // 関数定義2　無名関数　あんまり使わない。
+        const sub = function(n, m) {
+            return n - m;
+        };  // 最後にセミコロンが必要
+
+        // 関数呼び出し
+        let dif = sub(30, 10);
+        console.log(dif);  // 20
+
+
+        // アロー式
+        const multi = (n, m) => {
+            return n * m;
+        }
+        // 関数呼び出し
+        let ans = multi(20, 3);
+        console.log(ans);  // 60
+
+        // アロー式 省略形
+        const div = num => num / 2;
+        // 関数呼び出し
+        let num2 = div(100);
+        console.log(num2);  // 50
+
+
+
+    </script>
+</body>
+</html>

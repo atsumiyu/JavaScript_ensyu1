@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript学習</title>
+</head>
+<body>
+    <p>条件分岐</p>
+    <script>
+
+        /* 比較演算子
+        === ： 等しい
+        !== ： 等しくない
+        ==：等しい（型を考慮しない）
+        !=：等しくない（型を考慮しない）
+        >= ： 左辺が右辺以上
+        > ： 左辺が右辺より小さい
+        <= ： 左辺が右辺以下
+        < ： 左辺が右辺より小さい
+        */
+
+        console.log(100 === 100);   // true
+        // 型が異なればfalseになる
+        console.log(100 === '100'); // false
+
+        console.log(100 == 100);   // true
+        // 型が異なってもtrue
+        console.log(100 == '100'); // true
+
+        console.log(100 !== '100') // true
+        console.log(100 != '100')  // false
+
+        /*
+        && ： AND。左辺と右辺が両方trueの場合にtrue
+        || ： OR。左辺か右辺の片方でもtrueの場合true
+        ! ： NOT。trueの場合はfalse、falseの場合はtrue
+        */
+
+        let htmlScore = 80;
+        let cssScore = 70;
+
+        // 両方が80以上の場合に処理を通る
+        if(htmlScore >= 80 && cssScore >= 80) {
+            console.log('両方80以上');
+        }
+
+
+        // if (条件式1) {
+        //     条件式1がtrueの時の処理
+        // } else if (条件式2) {
+        //     条件式2がtrueの時の処理
+        // } else {
+        //     どの条件式にも当てはまらない時の処理
+        // }
+
+        let score = 90;
+        // if文の基本系 
+        if (score >= 80) {
+            console.log('合格');
+        }
+
+        // if文 {}の省略
+        if (score >= 80)
+            console.log('合格');
+
+        // if else文
+        if (score >= 80) {
+            console.log('合格');
+        } else {
+            console.log('不合格');
+        }
+
+        // if elseif else文
+        if (score >= 80) {
+            console.log('A判定');
+        } else if (score >= 70 ){
+            console.log('B判定');
+        } else {
+            console.log('C判定');
+        }
+
+        // 文字列の中に文字が入っているとtrue
+        // if(name) {
+        //     console.log(name);
+        // }
+
+
+        /*
+        switch(式) {
+            case ラベル:
+                処理
+                break;
+            ...
+            default :
+                処理
+                break;
+        }
+        */
+
+        // 文字で比較
+        const blood_type = 'A';
+        switch (blood_type) {
+            case 'A':
+                console.log('A型');
+                break;
+            case 'B':
+                console.log('B型');
+                break;
+            case 'O':
+                console.log('O型');
+                break;
+            case 'AB':
+                console.log('AB型');
+                break;
+            default:
+                console.log('人間以外');
+                break;
+        }
+
+
+        /*
+        条件式 ? trueの場合の値 : falseの場合の値;
+        */
+
+        let score2 = 90;
+        let msg = score2 >= 80 ? '合格' : '不合格';
+        console.log(msg); // 合格
+        
+
+
+    </script>
+</body>
+</html>

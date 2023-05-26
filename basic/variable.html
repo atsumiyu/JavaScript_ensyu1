@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript学習</title>
+</head>
+<body>
+    <p>変数など</p>
+    <script>
+        'use strict';
+        
+        console.log("Hello.JavaScript");
+
+        var greet1 = 'Good Morning'; // 使ってはいけない
+        let greet2 = 'Hello'; // 変数の宣言
+        const greet3 = 'Bye'; // 定数の宣言
+
+        console.log(greet1); // Good Morning
+        console.log(greet2); // Hello
+        console.log(greet3); // Bye
+
+        greet1 = 'おはよう'; // varで宣言した変数は再代入で変更可
+        greet2 = 'こんにちは'; // letで宣言した変数は再代入で変更可
+
+        // greed3 = 'さようなら' // constで宣言された変数は再代入不可
+
+        // ''でも""でも可
+        console.log('文字列シングルクォーテーション使用')
+        console.log("文字列ダブルクォーテーション使用");
+
+        // 整数小数両方表紙できる。
+        console.log(200); // 200
+        console.log(20.5); // 20.5
+
+        // 変数使用サンプル
+        const name = 'Alice'
+
+        // `で変数名を囲い、変数を代入できる。
+        console.log(`Hello ${name}`);
+
+        // 文字列結合ができる
+        console.log("Hello" + " World");
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サンプル</title>
+<!-- <link rel="stylesheet" href="css/styles.css"> -->
+</head>
+<body>
+ 
+  
+<div id="div1">
+  div_origin
+</div>
+
+aaaaaa <!--ただの文字記入はinline要素-->
+<p>bbbbbb</p> <!-- <p>はblock要素 -->
+
+<div id="div2">
+  div2_origin
+</div>
+  
+<script>
+  'use strict';
+
+  // .writeはHTML文書の最後にテキストを追加する
+  document.write('12345');
+
+  // id属性がconteiner(ここではdiv1)の要素を取得
+  // ＊これから入れようとしている要素がconteiner
+  const div1 = document.getElementById('div1');
+  // テキストの設定
+  // 元々あったidがdiv1のdivに入っているテキストは、
+  // 再設定される。
+  div1.textContent = 'div1';
+  // div1.textContent = 'div2';
+
+  const div2 = document.getElementById("div2");
+  div2.textContent = "div2";
+
+
+  // // 新しい要素の作成
+  // 型指定 変数名 = document.createElement('タグ指定')
+  const newP = document.createElement('p');
+  // 作成した要素にクラスを追加
+  newP.classList = 'text';
+  // テキストを設定
+  newP.textContent = 'abcde'
+  // 要素をドキュメントに追加する。.createElementメソッドを使用。
+  // 元から入っていた要素を更新したりはしない。
+  // .appendChild()を使うと要素の中に追加する。
+  div1.appendChild(newP);
+  
+  const neoP = document.createElement('p');
+  neoP.classList = 'text';
+  neoP.textContent = 'ABCDE';
+  // .append()を使うと要素の外に出る。
+  div1.append(neoP);
+  
+
+</script>
+</body>
+</html>
